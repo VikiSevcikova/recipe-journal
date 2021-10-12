@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  color: #fff;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(158, 158, 158);
+  opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(158, 158, 158);
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(158, 158, 158);
+}
