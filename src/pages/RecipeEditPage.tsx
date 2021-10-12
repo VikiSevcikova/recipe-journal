@@ -1,6 +1,6 @@
 import { Row, Col, List } from 'antd';
 import { LeftOutlined, DashboardOutlined, CheckOutlined, CloseCircleOutlined } from '@ant-design/icons';
-import { H3Title, IconButton, Button, DescriptionInput, InputLabel } from '../components/StyledComponents';
+import { H3Title, IconButton, Button, DescriptionInput } from '../components/StyledComponents';
 import { BiTimeFive } from 'react-icons/bi';
 import { AiOutlinePieChart } from 'react-icons/ai';
 import { Icon } from '../components/StyledComponents';
@@ -46,10 +46,10 @@ const RecipeEditPage: React.FC = () => {
                <Col><IconButton href={`/recipe/${params.id}`} onClick={save}> <CheckOutlined /> </IconButton></Col>
            </Row>
            <div style={{padding: "0 20px 20px 20px"}}>
-                    <Icon>
-                        <InputLabel>Title: </InputLabel>
-                        <InputComponent type="text" placeholder="Brownie" value={title} onChange={(e)=> setTitle(e.target.value)}/>
-                    </Icon>
+                    <Row align="middle"> 
+                        <Col xs={4}> Title: </Col>
+                        <Col xs={20}> <InputComponent type="text" placeholder="Brownie" value={title} onChange={(e)=> setTitle(e.target.value)}/> </Col>
+                    </Row>
                     <Row align="middle" gutter={16}>
                         <Col md={12} xs={24} >
                             {/* image */}
@@ -57,18 +57,18 @@ const RecipeEditPage: React.FC = () => {
                         </Col>
                         {/* time + servings + temperature */}
                         <Col md={12} xs={24}>
-                            <Icon> 
-                                <InputLabel> <BiTimeFive/> Cooking Time: </InputLabel>
-                                <InputComponent type="text" placeholder="30 min" value={cookingTime} onChange={(e)=> setCookingTime(e.target.value)}/> 
-                            </Icon>
-                            <Icon>
-                                <InputLabel> <DashboardOutlined /> Temperature: </InputLabel>
-                                <InputComponent type="text" placeholder="180 C" value={temperature} onChange={(e)=> setTemperature(e.target.value)}/>
-                            </Icon>
-                            <Icon>
-                                <InputLabel> <AiOutlinePieChart/> Servings: </InputLabel>
-                                <InputComponent type="number" placeholder="1" value={servings} onChange={(e)=> setServings(parseInt(e.target.value))}/>
-                            </Icon>
+                            <Row align="middle"> 
+                                <Col xs={12}> <BiTimeFive/> Cooking Time: </Col>
+                                <Col xs={12}> <InputComponent type="text" placeholder="30 min" value={cookingTime} onChange={(e)=> setCookingTime(e.target.value)}/> </Col>
+                            </Row>
+                            <Row align="middle"> 
+                                <Col xs={12}> <DashboardOutlined /> Temperature: </Col>
+                                <Col xs={12}> <InputComponent type="text" placeholder="30 min" value={cookingTime} onChange={(e)=> setCookingTime(e.target.value)}/></Col>
+                            </Row>
+                            <Row align="middle"> 
+                                <Col xs={12}> <AiOutlinePieChart/> Servings: </Col>
+                                <Col xs={12}> <InputComponent type="number" placeholder="1" value={servings} onChange={(e)=> setServings(parseInt(e.target.value))}/> </Col>
+                            </Row>
                         </Col>
                     </Row>
                    

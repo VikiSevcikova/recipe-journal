@@ -1,12 +1,16 @@
 import { Row, Col } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
-import { IconButton, Title } from '../components/StyledComponents';
+import { PlusOutlined, SearchOutlined } from '@ant-design/icons';
+import { IconButton, IconRow, SearchBtn, Title } from '../components/StyledComponents';
 import RecipeCard from '../components/RecipeCard';
+import InputComponent from '../components/Input';
+import { useState } from 'react';
 
 const Main: React.FC = () => {
+    const [inputTitle, setInputTitle] = useState<string>("");
+
     return (
-        <>
-           <Row align="middle" justify="space-between" style={{padding:"20px"}}>
+        <div style={{padding:"20px"}}>
+           <Row align="middle" justify="space-between">
                <Col>
                <Title>
                     Recipe Journal
@@ -16,7 +20,13 @@ const Main: React.FC = () => {
                <IconButton><PlusOutlined/></IconButton>
                </Col>
            </Row>
-           <Row gutter={16} align="middle" style={{padding:"20px", margin:"0"}}>
+           <Row>
+           <form style={{width:"100%", position:"relative"}}>
+               <InputComponent type="text" placeholder="Search recipe by title" value={inputTitle} onChange={(e) => setInputTitle(e.target.value)}/>
+               <SearchBtn/>
+            </form>
+           </Row>
+           <Row gutter={16} align="middle">
                 <RecipeCard/>
                 <RecipeCard/>
                 <RecipeCard/>
@@ -25,7 +35,7 @@ const Main: React.FC = () => {
                 <RecipeCard/>
                 <RecipeCard/>
            </Row>
-        </>
+        </div>
     );
 }
 

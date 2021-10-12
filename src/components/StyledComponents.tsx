@@ -1,3 +1,4 @@
+import { SearchOutlined } from '@ant-design/icons';
 import { Col, Row, Typography, Input } from 'antd';
 import styled from 'styled-components';
 
@@ -76,17 +77,13 @@ export const Description = styled(Paragraph)`
     color:#fff;
 `;
 
-export const InputLabel = styled.div`
-    margin-right: 10px;
-`;
-
 export const StyledInput = styled.input`
     border: none;
     outline: none;
     border-bottom: 2px solid #EFEFEF;
     background-color: transparent;
     margin: 20px 0;
-    width: 70%;
+    width: 100%;
 `;
 
 export const DescriptionInput = styled(TextArea)`
@@ -110,4 +107,11 @@ export const Button = styled.button`
     &:hover{
         background-color: #ffffff22;
     }
+`;
+
+export const SearchBtn = styled(SearchOutlined)`
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
 `;

@@ -8,7 +8,7 @@ import { DashboardOutlined } from '@ant-design/icons';
 
 const RecipeCard: React.FC = () => {
     return (
-        <Card md={6} sm={12} xs={24}>
+        <Card md={8} sm={12} xs={24}>
             <Link to="recipe/1">
                 <CardImage src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"></CardImage>
                 <CardBody>
