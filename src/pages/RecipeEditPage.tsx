@@ -8,10 +8,7 @@ import { useParams } from 'react-router';
 import { useState } from 'react';
 import UploadImage from '../components/UploadImage';
 import InputComponent  from '../components/Input';
-
-interface RouteParams {
-    id: string
-}
+import { RouteParams } from '../models/appTypes';
 
 const RecipeEditPage: React.FC = () => {
     const params = useParams<RouteParams>();

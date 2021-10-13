@@ -1,23 +1,7 @@
-import { DeleteOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import ImageUploading, { ImageListType }  from 'react-images-uploading';
-import styled from "styled-components";
-import { Button, RecipeImage } from "./StyledComponents";
-
-interface UploadImageProps {
-    img: string;
-}
-
-const ImageItem = styled.div`
-    position: relative;
-`;
-
-const RemoveBtn = styled(DeleteOutlined)`
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 20px;
-`;
+import { UploadImageProps } from "../models/appTypes";
+import { Button, ImageItem, RecipeImage, RemoveBtn } from "./StyledComponents";
 
 
 const UploadImage: React.FC<UploadImageProps> = ({img}) => {

@@ -1,15 +1,8 @@
+import { InputProps } from "antd";
 import { useEffect, useState } from "react";
 import { StyledInput } from "./StyledComponents";
 
-interface InputProps{
-    value: string | number;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>)=> void;
-    placeholder: string;
-    type: string;
-}
-
 const InputComponent: React.FC<InputProps> = ({value, onChange, placeholder, type}) => {
-
     return (
         <>
             {type === "number" ? (

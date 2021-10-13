@@ -1,4 +1,4 @@
-import { SearchOutlined } from '@ant-design/icons';
+import { DeleteOutlined, SearchOutlined } from '@ant-design/icons';
 import { Col, Row, Typography, Input } from 'antd';
 import styled from 'styled-components';
 
@@ -16,7 +16,6 @@ export const Title = styled.h1`
     color: #fff;
     margin: 0;
 `;
-
 
 export const Card = styled(Col)`
     margin-bottom: 10px;
@@ -114,4 +113,15 @@ export const SearchBtn = styled(SearchOutlined)`
     position: absolute;
     right: 10px;
     top: 20px;
+`;
+
+export const ImageItem = styled.div`
+    position: relative;
+`;
+
+export const RemoveBtn = styled(DeleteOutlined)`
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
 `;

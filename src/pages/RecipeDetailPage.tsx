@@ -5,11 +5,7 @@ import { AiOutlinePieChart } from 'react-icons/ai';
 import { Icon, IconRow, IconButton, RecipeTitle, RecipeImage, H3Title, Description  } from '../components/StyledComponents';
 import { Checkbox } from 'antd';
 import { useParams } from 'react-router';
-
-
-interface RouteParams {
-    id: string
-  }
+import { RouteParams } from '../models/appTypes';
 
 const RecipeDetailPage: React.FC = () => {
     const params = useParams<RouteParams>();
